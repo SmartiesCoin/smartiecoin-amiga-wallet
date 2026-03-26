@@ -34,7 +34,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
+#include <unistd.h>
 #endif
 
 /* ---- Global wallet state ---- */
@@ -512,8 +512,7 @@ int main(int argc, char *argv[]) {
             extern void Sleep(unsigned long);
             Sleep(20);
 #else
-            struct timespec ts = {0, 20000000}; /* 20ms */
-            nanosleep(&ts, NULL);
+            usleep(20000); /* 20ms */
 #endif
         }
 #endif
