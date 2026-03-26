@@ -340,7 +340,6 @@ void smt_ripemd160_update(smt_ripemd160_ctx *ctx, const uint8_t *data,
 void smt_ripemd160_final(smt_ripemd160_ctx *ctx, uint8_t hash[20])
 {
     uint64_t totalbits;
-    uint32_t padlen;
     int i;
 
     /* Total bit count including the remaining buffer bytes */

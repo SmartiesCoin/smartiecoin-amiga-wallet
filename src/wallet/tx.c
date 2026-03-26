@@ -4,6 +4,7 @@
 #include "tx.h"
 #include "keys.h"
 #include "address.h"
+#include "../chainparams.h"
 #include "../crypto/sha256.h"
 #include "../crypto/secp256k1.h"
 #include "../crypto/base58.h"
@@ -453,7 +454,7 @@ int smt_utxo_select(const smt_utxo_set_t *set, smt_amount_t target,
     int selected = 0;
     smt_amount_t total = 0;
     smt_amount_t estimated_fee;
-    int i, j;
+    int j;
     int used[SMT_MAX_UTXOS];
 
     smt_memzero(used, sizeof(used));

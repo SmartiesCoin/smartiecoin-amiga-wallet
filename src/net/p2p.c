@@ -79,8 +79,7 @@ void smt_msg_build_header(smt_msg_header_t *hdr, const uint8_t magic[4],
         smt_sha256d(payload, payload_size, hash);
     } else {
         /* SHA256d of empty data */
-        uint8_t empty_hash[32];
-        smt_sha256d(NULL, 0, hash);
+        smt_sha256d((const uint8_t *)"", 0, hash);
     }
     smt_memcpy(hdr->checksum, hash, 4);
 }
