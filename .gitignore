@@ -1,0 +1,23 @@
+# Build output
+SmartiecoinWallet
+smartiecoin-wallet
+smartiecoin-wallet.exe
+
+# Object files
+*.o
+*.obj
+
+# Wallet data (never commit!)
+wallet.dat
+headers.dat
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
