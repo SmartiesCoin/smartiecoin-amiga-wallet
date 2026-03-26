@@ -158,12 +158,14 @@ int smt_net_resolve(const char *hostname, char *ip_out, size_t ip_size) {
 #pragma comment(lib, "ws2_32.lib")
 #else
 #include <sys/socket.h>
+#include <sys/ioctl.h>
 #include <netinet/in.h>
 #include <netdb.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include <errno.h>
 #include <arpa/inet.h>
+#define h_addr h_addr_list[0]
 #endif
 
 #include <string.h>
