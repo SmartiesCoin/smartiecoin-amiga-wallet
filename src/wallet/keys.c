@@ -10,8 +10,10 @@
 
 #ifdef AMIGA
 #include <proto/exec.h>
+#include <proto/dos.h>
 #include <proto/timer.h>
 #include <proto/intuition.h>
+#include <dos/dos.h>
 #include <devices/timer.h>
 #include <hardware/cia.h>
 #include <hardware/custom.h>

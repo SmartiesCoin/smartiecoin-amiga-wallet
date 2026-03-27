@@ -8,6 +8,9 @@
 
 #ifdef AMIGA
 #include <proto/exec.h>
+#include <proto/dos.h>
+#include <dos/dos.h>
+#include <dos/datetime.h>
 #else
 #include <string.h>
 #include <time.h>
